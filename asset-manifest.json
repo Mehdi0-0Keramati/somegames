@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/somegames/static/css/main.04fc93f5.css",
-    "main.js": "/somegames/static/js/main.3b27a651.js",
+    "main.css": "/somegames/static/css/main.2138a417.css",
+    "main.js": "/somegames/static/js/main.91ce0144.js",
     "static/media/SomeGamesBG.gif": "/somegames/static/media/SomeGamesBG.03b2b3b1d402498d7779.gif",
     "static/media/background.gif": "/somegames/static/media/background.528aa38dd7bea111f5a9.gif",
     "static/media/Roboto-BoldCondensed.ttf": "/somegames/static/media/Roboto-BoldCondensed.01decb86b9d1459ffdfb.ttf",
@@ -10,11 +10,11 @@
     "static/media/output-onlinegiftools.gif": "/somegames/static/media/output-onlinegiftools.377aeb5e6984d20d4d78.gif",
     "static/media/ground.webp": "/somegames/static/media/ground.c9c5f92473b22b5dc713.webp",
     "index.html": "/somegames/index.html",
-    "main.04fc93f5.css.map": "/somegames/static/css/main.04fc93f5.css.map",
-    "main.3b27a651.js.map": "/somegames/static/js/main.3b27a651.js.map"
+    "main.2138a417.css.map": "/somegames/static/css/main.2138a417.css.map",
+    "main.91ce0144.js.map": "/somegames/static/js/main.91ce0144.js.map"
   },
   "entrypoints": [
-    "static/css/main.04fc93f5.css",
-    "static/js/main.3b27a651.js"
+    "static/css/main.2138a417.css",
+    "static/js/main.91ce0144.js"
   ]
 }
