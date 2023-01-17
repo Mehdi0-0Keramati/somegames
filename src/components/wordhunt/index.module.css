@@ -1,0 +1,79 @@
+.container_wordHunt {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../../assets/videos/background.gif") no-repeat center center/cover ;
+}
+
+.inside {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  font-family: Roboto-Black;
+}
+@media screen and (max-width: 400px) {
+  .inside {
+    width: 20rem;
+  }
+}
+.inside .header_wordHunt {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  padding: 1rem;
+  color: rgb(87, 87, 87);
+}
+.inside .box_wordHunt {
+  width: 100%;
+  text-align: center;
+  font-family: italic-bold;
+}
+.inside .box_wordHunt h1 {
+  font-family: Roboto-Medium;
+  font-size: 2rem;
+  letter-spacing: 0.8rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+.inside .box_wordHunt {
+  text-align: left;
+  padding: 2rem;
+  padding-bottom: 0;
+}
+.inside .box_wordHunt .hint {
+  color: gray;
+  margin-top: 2rem;
+  text-align: left;
+}
+.inside .box_wordHunt .timeLeft {
+  margin: 1rem 0;
+}
+.inside .box_wordHunt input {
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  border: 1px solid royalblue;
+  padding: 0.4rem;
+}
+.inside .buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inside .buttons button {
+  font-family: Roboto-Black;
+  width: calc(80% / 2 - 8px);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  color: white;
+  background: royalblue;
+}
+.inside .buttons button:hover {
+  background-color: rgb(13, 13, 95);
+}

@@ -1,0 +1,93 @@
+.game_box {
+  width: 500px;
+  height: 500px;
+  background: salmon;
+  position: relative;
+  overflow: hidden;
+  background: url("../../assets/images/ground.webp") no-repeat center center/cover;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 800px) {
+  .game_box {
+    width: 100vw;
+  }
+}
+.startButton {
+  font-family: vazir;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  background-color: rgb(59, 109, 92);
+  color: white;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+.disable {
+  display: none !important;
+}
+.bird {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url("../../assets/videos/output-onlinegiftools.gif") no-repeat center
+    center/cover;
+  position: absolute;
+  left: 1rem;
+}
+.score {
+  position: absolute;
+  top: 1rem;
+  font-size: 2rem;
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.wallTop,
+.wallBottom {
+  background: #73bd2e;
+  border: 1px solid black;
+  width: 2rem;
+  position: absolute;
+  right: -2rem;
+}
+.wallTop.move,
+.wallBottom.move {
+  animation: move 1.5s linear infinite;
+}
+.wallTop {
+  top: 0;
+}
+.wallTop::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: -0.3rem;
+  width: 2.4rem;
+  height: 2rem;
+  background-color: #599620;
+  border: 1px solid black;
+}
+.wallBottom::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -0.3rem;
+  width: 2.4rem;
+  height: 2rem;
+  background-color: #599620;
+  border: 1px solid black;
+}
+.wallBottom {
+  bottom: 0;
+}
+@keyframes move {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 100%;
+  }
+}

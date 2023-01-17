@@ -1,0 +1,242 @@
+.tiktoktoeContainer {
+  font-family: vazir !important;
+  padding: 2rem;
+  width: 100vw;
+  height: 100vh;
+  background-color: #212121;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.boardContainer {
+  width: 30rem;
+  position: relative;
+}
+.boardContainer .startGame {
+  font-family: vazir !important;
+  cursor: pointer;
+  background: lightsteelblue;
+  display: block;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.boardContainer .startGame:hover {
+  background-color: lightskyblue;
+}
+.boardContainer .disableStartGame {
+  display: none;
+}
+.changePlayerName {
+  color: white;
+  background: #184774;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 0.8rem;
+  cursor: pointer;
+}
+.changePlayerName:hover {
+  background-color: #2164a3;
+}
+.boardContainer .buttonbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.boardContainer .resetScore {
+  height: 2rem;
+  font-family: vazir !important;
+  cursor: pointer;
+  margin: 0.4rem 0;
+  display: block;
+  background: lightskyblue;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  font-size: 0.7rem;
+  position: relative;
+  overflow: hidden;
+}
+.boardContainer .resetScore:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2rem;
+  animation: fadeOn 0.4s ease-in-out forwards;
+}
+.boardContainer .winner_counter {
+  display: flex;
+  margin: 0.5rem auto;
+  justify-content: space-evenly;
+  width: 16rem;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+}
+.boardContainer .winner_counter .border_winner {
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  width: 50%;
+  height: 0.2rem;
+  background: darkcyan;
+  transition: 0.5s !important;
+}
+.boardContainer .winner_counter.oClass .border_winner {
+  left: 0;
+}
+.boardContainer .winner_counter.xClass .border_winner {
+  left: 50%;
+}
+
+.boardContainer h4 {
+  text-align: center;
+  color: rgb(20, 174, 245);
+  text-shadow: 0 0 0.2rem blue;
+  filter: drop-shadow(0 0 0.2rem royalblue);
+  font-size: 1.8rem;
+  margin-bottom: -1rem;
+  margin: 0.3rem 0;
+}
+.boardContainer .textWinner {
+  position: absolute;
+  top: 66%;
+  left: 20%;
+  font-size: 1.3rem;
+  color: coral;
+  text-shadow: 0 0 0.2rem darkred;
+  filter: drop-shadow(0 0 0.2rem orange);
+  z-index: 20;
+  background-color: #2f84d3;
+  padding: 1rem 5rem;
+  animation: showTextWinner 0.4s ease-out forwards alternate;
+}
+@keyframes showTextWinner {
+  0% {
+    transform: scale(1) skewY(-15deg);
+  }
+  40% {
+    transform: scale(1.5) skewY(-15deg);
+  }
+  70% {
+    transform: scale(1.3) skewY(-15deg);
+  }
+  100% {
+    transform: scale(1) skewY(-15deg);
+  }
+}
+.boardContainer .restart {
+  font-family: vazir !important;
+  height: 2rem;
+  cursor: pointer;
+  background: skyblue;
+  margin: 0;
+  display: block;
+  font-size: 0.7rem;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  position: relative;
+}
+.boardContainer .restart:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2rem;
+  animation: fadeOn 0.4s ease-in-out forwards;
+}
+@keyframes fadeOn {
+  from {
+    box-shadow: 0 0 0 2rem royalblue inset;
+  }
+  to {
+    box-shadow: 0 0 0 0 lightseagreen inset;
+  }
+}
+.board {
+  margin: 2rem auto;
+  display: grid;
+  width: 24rem;
+  height: 24rem;
+  grid-template-columns: repeat(3, 8rem);
+  grid-template-rows: repeat(3, 8rem);
+}
+.board.x .cell:not(.x):not(.o):hover::after {
+  content: "X";
+  position: absolute;
+  font-size: 7rem;
+  color: #2f84d342;
+  z-index: -1;
+}
+
+.board.o .cell:not(.x):not(.o):hover::after {
+  content: "O";
+  position: absolute;
+  font-size: 7rem;
+  z-index: -1;
+  color: #2f84d342;
+}
+
+@media only screen and (max-width: 700px) {
+  .board {
+    width: 23rem;
+    height: 23rem;
+    grid-template-columns: repeat(3, 7.6rem);
+    grid-template-rows: repeat(3, 7.6rem);
+  }
+  .boardContainer .textWinner {
+    top: 65%;
+    left: 25%;
+  }
+}
+.board .cell {
+  border: 0.1rem solid cornflowerblue;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 7;
+}
+.board .cell.disable {
+  pointer-events: none;
+}
+.board .cell .square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 7rem;
+  background-color: #2f84d3;
+  color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+}
+.board .cell:first-child,
+.board .cell:nth-child(2),
+.board .cell:nth-child(3) {
+  border-top: none;
+}
+.board .cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.board .cell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.board .cell:last-child,
+.board .cell:nth-child(7),
+.board .cell:nth-child(8) {
+  border-bottom: 0;
+}

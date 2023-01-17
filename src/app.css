@@ -1,0 +1,79 @@
+@font-face {
+  font-family: vazir;
+  src: url("./assets/fonts/Vazir-Black.ttf");
+}
+@font-face {
+  font-family: robotoBold;
+  src: url("./assets/fonts/Roboto-BoldCondensed.ttf");
+}
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  font-family: robotoBold;
+  text-decoration: none;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #232323;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+}
+.app {
+  flex-direction: column;
+}
+.title {
+  color: snow;
+  font-size: 3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-shadow: 0 0 1rem black, 0 0 2rem black, 0 0 3rem black;
+  -webkit-text-stroke-color: crimson;
+  -webkit-text-stroke-width: 0.5px;
+}
+.container {
+  width: auto;
+  max-width: 90vw;
+  height: auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.item {
+  width: 10rem;
+  height: 10rem;
+  background-color: #232323;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.1rem skyblue;
+  cursor: pointer;
+}
+.item > * {
+  color: snow !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  -webkit-text-stroke-color: crimson;
+  -webkit-text-stroke-width: 0.5px;
+  text-shadow: 0 0 4rem black;
+}
+.item:hover {
+  background-color: #212121;
+  box-shadow: 0 0 0.4rem snow;
+  transform: scale(1.1);
+}
