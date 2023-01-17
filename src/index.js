@@ -40,7 +40,7 @@ const router = createHashRouter([
 ])
 
 root.render(
-    <section style={{ background: `url(${bg}) no-repeat center center/cover` }}>
+    <section className="section" style={{ background: `url(${bg}) no-repeat center center/cover` }}>
         <RouterProvider router={router} />
     </section>
 )
