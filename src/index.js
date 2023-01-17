@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { createBrowserRouter, createHashRouter, RouterProvider } from "react-router-dom"
 
 
 import { TikTokToe, WordHunt, MemoryGame, DinoGame, FlappyBird } from "./components"
@@ -11,7 +11,7 @@ import bg from "./assets/videos/SomeGamesBG.gif";
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <App />,
